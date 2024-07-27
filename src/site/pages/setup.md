@@ -34,8 +34,20 @@
               java -classpath lib/slf4j-api-2.1.0-alpha1.jar:lib/logback-core-1.5.6.jar:lib/logback-classic-1.5.6.jar:logback-examples-1.5.6.jar:target/classes chapters.introduction.HelloWorld1
                 ```
 * Maven dependency declaration
-  * TODO:
-* Optional dependencies
-  * TODO:
+  * if you add "ch.qos.logback:logback-classic" -- by transitive rules -- will add
+    * slf4j-api.jar
+    * logback-core.jar
+  * optional dependencies
+    * ch.qos.logback:logback-access
+    * javax.mail:mail
+      * uses
+        * `SMTPAppender`
+    * org.codehaus.janino:janino
+      * uses
+        * conditional processing | configuration files
 * Building Logback
-  * TODO:
+  * "JRE"
+    * ONLY required dependency | runtime
+  * logback v1.5.X
+    * Java v21 to build
+    * Java v11 | JRE
